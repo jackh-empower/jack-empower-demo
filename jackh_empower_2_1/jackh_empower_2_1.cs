@@ -55,6 +55,7 @@ namespace jackh_empower_2_1
 	using System.Collections.Generic;
 	using System.Globalization;
 	using System.Text;
+	using Empower.Library.Room2;
 	using Skyline.DataMiner.Automation;
 	
 	/// <summary>
@@ -68,7 +69,9 @@ namespace jackh_empower_2_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-	
+			var order = OrderFactory.CreateOrder("Order 1");
+
+			order.Dispatch("JackH");
 		}
 	}
 }
